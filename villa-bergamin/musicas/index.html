@@ -26,19 +26,82 @@ main{width:min(1080px,calc(100% - 32px));margin:0 auto}.intro{text-align:center;
 .grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.song{border:1px solid #355246;background:#17332b;color:#fff;text-align:left;display:flex;align-items:center;gap:12px;padding:10px;border-radius:12px;min-height:68px;transition:background .15s}.song:hover,.song[aria-current=true]{background:#295244}.song img{width:54px;height:47px;object-fit:cover;border-radius:7px}.song span{min-width:0;flex:1}.song strong{display:block;font-size:14px;line-height:1.3}.song small{display:block;color:#cad4c7;margin-top:4px;font-size:12px}.song b{font-size:18px;color:var(--gold);padding:0 6px}
 .note{color:#bbccbf;font-size:12px;line-height:1.6;margin:24px 0 44px}footer{text-align:center;border-top:1px solid #345447;background:#112d25;padding:38px 20px;color:#d7e0d3}footer strong{font-family:Georgia,serif;font-size:24px}footer p{font-size:13px;color:#b9cbbd}
 @media(max-width:680px){header{padding:16px}.wordmark{font-size:14px}.seal{height:42px;width:42px}.nav{font-size:11px}.hero{min-height:360px;padding:50px 17px}.panel{grid-template-columns:1fr}.screen,.screen iframe{min-height:220px}.player-info{padding:25px}.grid{grid-template-columns:1fr}.sectiontop{margin-top:40px}.song{min-height:70px}}
+
+body{background:#fff9ee;color:#173e34}
+.hero{background:radial-gradient(circle at 82% 29%,#ffdc82 0 7%,transparent 7.2%),linear-gradient(165deg,#fcdab0,#f6b47e 70%,#f5d39e);text-align:left;justify-content:flex-start;padding:50px max(7vw,22px) 100px;min-height:320px;color:#203e32}
+.hero:before{background:#829b76;height:67%;clip-path:polygon(0 94%,15% 68%,27% 82%,47% 56%,56% 65%,71% 23%,81% 48%,93% 21%,100% 32%,100% 100%,0 100%)}
+.hero:after{background:#35634e;height:56%;clip-path:polygon(0 95%,12% 80%,25% 91%,37% 77%,51% 87%,67% 58%,78% 68%,93% 31%,100% 45%,100% 100%,0 100%)}
+.hero .eyebrow,.sectiontop .eyebrow{color:#77452c}.hero p{color:#263d31;max-width:32em;margin:0 0 20px}.cta{background:#193f32;color:white;box-shadow:none}.panel{margin-top:28px;color:white}.screen{background:repeating-radial-gradient(circle at 50% 48%,#244b42 0 2px,#2a5448 3px 5px);min-height:225px}.disc{background:#efbb6a;color:#233f32;box-shadow:0 0 0 13px #1a3730,0 0 0 15px #bc9b68}.placeholder span{background:#193a30;border-radius:20px;padding:4px 12px;margin-top:15px}.count,.note{color:#526459}.chip{color:#264739;padding:12px 16px}.chip[aria-pressed=true]{background:#245440;color:white;border-color:#245440}.song{background:#fffdfa;color:#173e34;border-color:#ced6ca}.song:hover,.song[aria-current=true]{background:#e2eddb}.song b{color:#984829}.song small{color:#486656;font-size:14px}.song strong{font-size:16px}.control,.chip,.count{font-size:14px}.control{min-height:44px}.player-info p{margin-top:0}.song:focus-visible,button:focus-visible,a:focus-visible{outline:3px solid #dd8d20;outline-offset:3px}
+@media(max-width:680px){.hero{padding:32px 20px 75px;min-height:310px}.hero p{max-width:26em}.screen{min-height:145px}.disc{width:62px;height:62px;font-size:32px}.panel{margin-top:16px}.filters{gap:7px}.chip{padding:10px 12px;min-height:44px}.sectiontop{align-items:center}.count{white-space:nowrap}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 </head><body>
 <header><div class="logo"><div class="seal">VB</div><div><div class="wordmark">VILLA BERGAMIN</div><div class="sub">MONTE VERDE • MINAS GERAIS</div></div></div><a class="nav" href="https://www.villabergamin.com.br" target="_blank" rel="noopener">Nossa pousada ↗</a></header>
-<section class="hero"><div><div class="eyebrow">Uma seleção feita com carinho</div><h1>Trilha Sonora<br>da Montanha</h1><p>Um pouco de romance, boas energias e tranquilidade para acompanhar seus melhores momentos em Monte Verde.</p><a class="cta" href="#ouvir">♫ Escolha sua música</a></div></section>
-<main><div class="intro">Bem-vindo à <strong>playlist da Villa Bergamin</strong>. Escolha o clima do momento, aperte play e aproveite a estadia. Cada hóspede ouve no próprio celular, sem compartilhar contas.</div>
-<section class="panel" id="ouvir" aria-label="Reprodutor"><div id="screen" class="screen"><div class="placeholder"><div class="disc">♫</div><span>Seu momento merece uma trilha sonora</span></div></div><div class="player-info"><div class="eyebrow">Aconchego em cada nota</div><h2>A música começa aqui.</h2><p>Deixe o som embalar sua pausa na montanha. Escolha uma faixa abaixo ou comece pela nossa seleção.</p><div class="playing">SELECIONADA AGORA<strong id="now">Escolha uma música para começar</strong></div><div class="controls"><button type="button" class="control" id="start">▶ Ouvir seleção</button><button type="button" class="control outline" id="next" disabled>Próxima faixa →</button><a href="https://www.youtube.com/" target="_blank" rel="noopener" id="open" class="control outline">Abrir no YouTube ↗</a></div></div></section>
-<section aria-label="Lista de músicas"><div class="sectiontop"><div><div class="eyebrow">Nossa seleção musical</div><h2>Escolha o clima da viagem</h2></div><div id="count" class="count">16 músicas</div></div><div class="filters" role="group" aria-label="Filtrar músicas"><button class="chip" data-filter="todas" aria-pressed="true">Todas</button><button class="chip" data-filter="romance" aria-pressed="false">♡ Romance</button><button class="chip" data-filter="familia" aria-pressed="false">☀ Família</button><button class="chip" data-filter="montanha" aria-pressed="false">♧ Relaxar</button></div><div class="grid" id="songs"></div><p class="note">As músicas são reproduzidas com vídeos do YouTube. A disponibilidade, os anúncios e as permissões de reprodução são definidos pelo YouTube e por seus titulares. Alguns celulares exigem tocar em play. Se um vídeo não abrir aqui, use “Abrir no YouTube”.</p></section></main>
+<section class="hero"><div class="cover"><div class="eyebrow">Trilha sonora da montanha</div><h1>O som da Villa</h1><p>Do café no jardim à roda de amigos, um pouco de balanço brasileiro e refrões para cantar junto em Monte Verde.</p><button class="cta" id="heroPlay" type="button">▶ Ouvir a seleção</button></div></section>
+<main><section class="panel" id="ouvir" aria-label="Reprodutor"><div id="screen" class="screen"><div class="placeholder"><div class="disc">♫</div><span>Villa Bergamin • Monte Verde</span></div></div><div class="player-info"><div class="eyebrow" id="status">Faixa de abertura</div><h2 id="now" aria-live="polite">O Sol</h2><p id="artist">Vitor Kley</p><div class="controls"><button type="button" class="control" id="start">▶ Ouvir seleção</button><button type="button" class="control outline" id="next" disabled>Próxima faixa</button><a href="https://www.youtube.com/watch?v=YVJijQIualA" target="_blank" rel="noopener" id="open" class="control outline">Abrir no YouTube ↗</a></div></div></section>
+<section aria-label="Lista de músicas"><div class="sectiontop"><div><div class="eyebrow">As faixas</div><h2>Qual é o clima de hoje?</h2></div><div id="count" class="count">9 músicas</div></div><div class="filters" role="group" aria-label="Filtrar músicas"><button class="chip" data-filter="todas" aria-pressed="true">Todas</button><button class="chip" data-filter="jardim" aria-pressed="false">Café no jardim</button><button class="chip" data-filter="trilha" aria-pressed="false">Pé na trilha</button><button class="chip" data-filter="roda" aria-pressed="false">Roda de amigos</button></div><div class="grid" id="songs"></div><p class="note">As músicas são reproduzidas com vídeos do YouTube. A disponibilidade, os anúncios e as permissões de reprodução são definidos pelo YouTube e por seus titulares. Alguns celulares exigem tocar em play. Se um vídeo não abrir aqui, use “Abrir no YouTube”.</p></section></main>
 <footer><strong>Villa Bergamin</strong><p>Monte Verde – MG · Um refúgio para colecionar bons momentos.</p><p><a href="https://wa.me/5535992703936" target="_blank" rel="noopener">Fale com a gente pelo WhatsApp</a> · <a href="https://www.villabergamin.com.br/" target="_blank" rel="noopener">Conheça a pousada</a></p></footer>
 <script>
-const SONGS=[["F1yNwxLW1Cw","Trevo (Tu)","ANAVITÓRIA","romance familia montanha"],["W62-ZG9tPpI","Amei Te Ver","Tiago Iorc","romance montanha"],["9ni75h8q56A","Meu Abrigo","Melim","romance familia"],["WkLpoUiasZ8","Partilhar","Rubel & ANAVITÓRIA","romance montanha"],["t7M89YJAPhM","Ainda Bem","Marisa Monte","romance familia"],["dQjO0zo12Go","Velha Infância","Tribalistas","romance familia montanha"],["R7ukgO7RXnY","Deixa","Lagum","familia montanha"],["YVJijQIualA","O Sol","Vitor Kley","familia montanha"],["tRmtL8yxcSA","Sorri, Sou Rei","Natiruts","familia montanha"],["EkHTsc9PU2A","I'm Yours","Jason Mraz","romance familia montanha"],["seZMOTGCDag","Better Together","Jack Johnson","romance familia montanha"],["tO4dxvguQDk","Don't Know Why","Norah Jones","romance montanha"],["yKNxeF4KMsY","Yellow","Coldplay","romance montanha"],["2Vv-BfVoq4g","Perfect","Ed Sheeran","romance"],["LjhCEhWiKXk","Just the Way You Are","Bruno Mars","romance familia"],["rBrd_3VMC3c","What a Wonderful World","Louis Armstrong","familia montanha"]];
+const SONGS=[
+  [
+    "YVJijQIualA",
+    "O Sol",
+    "Vitor Kley",
+    "jardim"
+  ],
+  [
+    "dqUdI4AIDF0",
+    "Upside Down",
+    "Jack Johnson",
+    "jardim"
+  ],
+  [
+    "DK06zbkZ18w",
+    "Andar com Fé",
+    "Gilberto Gil",
+    "jardim"
+  ],
+  [
+    "j9tAJ3ZyLMY",
+    "Vou Deixar",
+    "Skank",
+    "trilha"
+  ],
+  [
+    "A1jsIctNgKQ",
+    "Do Seu Lado · acústico",
+    "Jota Quest",
+    "trilha"
+  ],
+  [
+    "xUNqsfFUwhY",
+    "Here Comes the Sun",
+    "The Beatles",
+    "trilha"
+  ],
+  [
+    "OR74idpsweg",
+    "Anunciação",
+    "Alceu Valença",
+    "roda"
+  ],
+  [
+    "i1Nm-MJ313w",
+    "Quero Ser Feliz Também · acústico",
+    "Natiruts",
+    "roda"
+  ],
+  [
+    "Gs069dndIYk",
+    "September",
+    "Earth, Wind & Fire",
+    "roda"
+  ]
+];
 const grid=document.querySelector('#songs'),filters=[...document.querySelectorAll('[data-filter]')],screen=document.querySelector('#screen'),now=document.querySelector('#now'),count=document.querySelector('#count'),next=document.querySelector('#next'),open=document.querySelector('#open');let filter='todas',current='';
 const filtered=()=>SONGS.filter(s=>filter==='todas'||s[3].split(' ').includes(filter));
 function render(){const items=filtered();count.textContent=items.length+' músicas';grid.replaceChildren(...items.map(s=>{let b=document.createElement('button');b.type='button';b.className='song';b.setAttribute('aria-current',String(s[0]===current));const img=document.createElement('img');img.src='https://img.youtube.com/vi/'+s[0]+'/mqdefault.jpg';img.alt='';img.loading='lazy';const span=document.createElement('span');const strong=document.createElement('strong');strong.textContent=s[1];const small=document.createElement('small');small.textContent=s[2];span.append(strong,small);const play=document.createElement('b');play.textContent='▶';b.append(img,span,play);b.addEventListener('click',()=>playSong(s[0]));return b}));}
-function playSong(id){const s=SONGS.find(x=>x[0]===id);if(!s)return;current=id;now.textContent=s[1]+' — '+s[2];open.href='https://www.youtube.com/watch?v='+encodeURIComponent(id);const iframe=document.createElement('iframe');iframe.src='https://www.youtube-nocookie.com/embed/'+encodeURIComponent(id)+'?autoplay=1&playsinline=1&rel=0';iframe.title='YouTube: '+s[1];iframe.allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share';iframe.allowFullscreen=true;iframe.referrerPolicy='strict-origin-when-cross-origin';screen.replaceChildren(iframe);next.disabled=false;render();screen.scrollIntoView({behavior:'smooth',block:'center'});}
+function playSong(id){const s=SONGS.find(x=>x[0]===id);if(!s)return;current=id;now.textContent=s[1];document.querySelector('#artist').textContent=s[2];document.querySelector('#status').textContent='Faixa selecionada';open.href='https://www.youtube.com/watch?v='+encodeURIComponent(id);const iframe=document.createElement('iframe');iframe.src='https://www.youtube-nocookie.com/embed/'+encodeURIComponent(id)+'?autoplay=1&playsinline=1&rel=0';iframe.title='YouTube: '+s[1];iframe.allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share';iframe.allowFullscreen=true;iframe.referrerPolicy='strict-origin-when-cross-origin';screen.replaceChildren(iframe);next.disabled=false;render();screen.scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'center'});}
+document.querySelector('#heroPlay').addEventListener('click',()=>playSong(filtered()[0][0]));
 document.querySelector('#start').addEventListener('click',()=>playSong(filtered()[0][0]));next.addEventListener('click',()=>{let items=filtered(),i=items.findIndex(s=>s[0]===current);playSong(items[(i+1)%items.length][0])});filters.forEach(btn=>btn.addEventListener('click',()=>{filter=btn.dataset.filter;filters.forEach(x=>x.setAttribute('aria-pressed',String(x===btn)));render()}));render();
 </script></body></html>
