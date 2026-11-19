@@ -39,64 +39,42 @@ body{background:#fff9ee;color:#173e34}
 <header><div class="logo"><div class="seal">VB</div><div><div class="wordmark">VILLA BERGAMIN</div><div class="sub">MONTE VERDE • MINAS GERAIS</div></div></div><a class="nav" href="https://www.villabergamin.com.br" target="_blank" rel="noopener">Nossa pousada ↗</a></header>
 <section class="hero"><div class="cover"><div class="eyebrow">Trilha sonora da montanha</div><h1>O som da Villa</h1><p>Do café no jardim à roda de amigos, um pouco de balanço brasileiro e refrões para cantar junto em Monte Verde.</p><button class="cta" id="heroPlay" type="button">▶ Ouvir a seleção</button></div></section>
 <main><section class="panel" id="ouvir" aria-label="Reprodutor"><div id="screen" class="screen"><div class="placeholder"><div class="disc">♫</div><span>Villa Bergamin • Monte Verde</span></div></div><div class="player-info"><div class="eyebrow" id="status">Faixa de abertura</div><h2 id="now" aria-live="polite">O Sol</h2><p id="artist">Vitor Kley</p><div class="controls"><button type="button" class="control" id="start">▶ Ouvir seleção</button><button type="button" class="control outline" id="next" disabled>Próxima faixa</button><a href="https://www.youtube.com/watch?v=YVJijQIualA" target="_blank" rel="noopener" id="open" class="control outline">Abrir no YouTube ↗</a></div></div></section>
-<section aria-label="Lista de músicas"><div class="sectiontop"><div><div class="eyebrow">As faixas</div><h2>Qual é o clima de hoje?</h2></div><div id="count" class="count">9 músicas</div></div><div class="filters" role="group" aria-label="Filtrar músicas"><button class="chip" data-filter="todas" aria-pressed="true">Todas</button><button class="chip" data-filter="jardim" aria-pressed="false">Café no jardim</button><button class="chip" data-filter="trilha" aria-pressed="false">Pé na trilha</button><button class="chip" data-filter="roda" aria-pressed="false">Roda de amigos</button></div><div class="grid" id="songs"></div><p class="note">As músicas são reproduzidas com vídeos do YouTube. A disponibilidade, os anúncios e as permissões de reprodução são definidos pelo YouTube e por seus titulares. Alguns celulares exigem tocar em play. Se um vídeo não abrir aqui, use “Abrir no YouTube”.</p></section></main>
+<section aria-label="Lista de músicas"><div class="sectiontop"><div><div class="eyebrow">As faixas</div><h2>Qual é o clima de hoje?</h2></div><div id="count" class="count">32 músicas</div></div><div class="filters" role="group" aria-label="Filtrar músicas"><button class="chip" data-filter="todas" aria-pressed="true">Todas</button><button class="chip" data-filter="familia" aria-pressed="false">Família</button><button class="chip" data-filter="serra" aria-pressed="false">Vibe da montanha</button><button class="chip" data-filter="astral" aria-pressed="false">Alto astral</button><button class="chip" data-filter="casal" aria-pressed="false">Casal</button></div><div class="grid" id="songs"></div><p class="note">As músicas são reproduzidas com vídeos do YouTube. A disponibilidade, os anúncios e as permissões de reprodução são definidos pelo YouTube e por seus titulares. Alguns celulares exigem tocar em play. Se um vídeo não abrir aqui, use “Abrir no YouTube”.</p></section></main>
 <footer><strong>Villa Bergamin</strong><p>Monte Verde – MG · Um refúgio para colecionar bons momentos.</p><p><a href="https://wa.me/5535992703936" target="_blank" rel="noopener">Fale com a gente pelo WhatsApp</a> · <a href="https://www.villabergamin.com.br/" target="_blank" rel="noopener">Conheça a pousada</a></p></footer>
 <script>
 const SONGS=[
-  [
-    "YVJijQIualA",
-    "O Sol",
-    "Vitor Kley",
-    "jardim"
-  ],
-  [
-    "dqUdI4AIDF0",
-    "Upside Down",
-    "Jack Johnson",
-    "jardim"
-  ],
-  [
-    "DK06zbkZ18w",
-    "Andar com Fé",
-    "Gilberto Gil",
-    "jardim"
-  ],
-  [
-    "j9tAJ3ZyLMY",
-    "Vou Deixar",
-    "Skank",
-    "trilha"
-  ],
-  [
-    "A1jsIctNgKQ",
-    "Do Seu Lado · acústico",
-    "Jota Quest",
-    "trilha"
-  ],
-  [
-    "xUNqsfFUwhY",
-    "Here Comes the Sun",
-    "The Beatles",
-    "trilha"
-  ],
-  [
-    "OR74idpsweg",
-    "Anunciação",
-    "Alceu Valença",
-    "roda"
-  ],
-  [
-    "i1Nm-MJ313w",
-    "Quero Ser Feliz Também · acústico",
-    "Natiruts",
-    "roda"
-  ],
-  [
-    "Gs069dndIYk",
-    "September",
-    "Earth, Wind & Fire",
-    "roda"
-  ]
+  ["YVJijQIualA", "O Sol", "Vitor Kley", "serra"],
+  ["dqUdI4AIDF0", "Upside Down", "Jack Johnson", "familia"],
+  ["j9tAJ3ZyLMY", "Vou Deixar", "Skank", "astral"],
+  ["A1jsIctNgKQ", "Do Seu Lado · acústico", "Jota Quest", "casal"],
+  ["o1QP2IHsgPk", "A Estrada · acústico", "Cidade Negra", "serra"],
+  ["iXINHsHmfx8", "Vâmo Pulá! · ao vivo", "Sandy e Junior", "familia"],
+  ["Gs069dndIYk", "September", "Earth, Wind & Fire", "astral"],
+  ["OR74idpsweg", "Anunciação", "Alceu Valença", "casal"],
+  ["FxYAwq64MDo", "Vento Ventania · acústico", "Biquini Cavadão", "serra"],
+  ["_DZzTQUJOsM", "O Pato", "Toquinho e Projeto Guri", "familia"],
+  ["FM2tZnIPZUk", "Não Quero Dinheiro (Só Quero Amar)", "Tim Maia", "astral"],
+  ["dQjO0zo12Go", "Velha Infância · ao vivo", "Tribalistas", "casal"],
+  ["xUNqsfFUwhY", "Here Comes the Sun", "The Beatles", "serra"],
+  ["i9RbBcDTRAI", "Sítio do Picapau Amarelo", "Gilberto Gil", "familia"],
+  ["QtXby3twMmI", "Adventure of a Lifetime", "Coldplay", "astral"],
+  ["sB8_zYjxSGg", "Pra Você Guardei o Amor", "Nando Reis e Ana Cañas", "casal"],
+  ["i1Nm-MJ313w", "Quero Ser Feliz Também · acústico", "Natiruts", "serra"],
+  ["-aThSQPM7MA", "Pé com Pé", "Palavra Cantada", "familia"],
+  ["2GZwbKnjRyE", "Mas Que Nada", "Sérgio Mendes", "astral"],
+  ["gUpGTRR4Tt4", "Meu Abrigo", "Melim", "casal"],
+  ["E4gd2exPf1s", "Vamos Fugir", "Gilberto Gil e Samuel Rosa", "serra"],
+  ["ru0K8uYEZWw", "Can't Stop the Feeling!", "Justin Timberlake", "familia"],
+  ["qMjXfiG-obQ", "Xote dos Milagres · ao vivo", "Falamansa", "astral"],
+  ["t7M89YJAPhM", "Ainda Bem", "Marisa Monte", "casal"],
+  ["DK06zbkZ18w", "Andar com Fé", "Gilberto Gil", "serra"],
+  ["ZbZSe6N_BXs", "Happy", "Pharrell Williams", "familia"],
+  ["6fTbzPUD1Y8", "O Descobridor dos Sete Mares · ao vivo", "Tim Maia", "astral"],
+  ["EkHTsc9PU2A", "I'm Yours", "Jason Mraz", "casal"],
+  ["SWtjTkixv5M", "Tocando em Frente", "Almir Sater", "serra"],
+  ["AyneRYfBP8M", "Passeio do Bebê", "Palavra Cantada", "familia"],
+  ["qXMIIVJE61Y", "Girassol · ao vivo", "Alceu Valença", "astral"],
+  ["seZMOTGCDag", "Better Together", "Jack Johnson", "casal"]
 ];
 const grid=document.querySelector('#songs'),filters=[...document.querySelectorAll('[data-filter]')],screen=document.querySelector('#screen'),now=document.querySelector('#now'),count=document.querySelector('#count'),next=document.querySelector('#next'),open=document.querySelector('#open');let filter='todas',current='';
 const filtered=()=>SONGS.filter(s=>filter==='todas'||s[3].split(' ').includes(filter));
